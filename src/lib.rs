@@ -1,4 +1,4 @@
-//! The notion of a calendar date.
+//! A notion of the calendar date.
 
 #![feature(macro_rules)]
 

@@ -5,7 +5,7 @@ authors = ["Ivan Ukhov <ivan.ukhov@gmail.com>"]
 license = "MIT"
 repository = "https://github.com/stainless-steel/date"
 homepage = "https://github.com/stainless-steel/date"
-description = "The library provides the notion of a calendar date."
+description = "The library provides a notion of the calendar date."
 
 [dependencies]
 time = "0.0.3"
