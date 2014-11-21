@@ -1,6 +1,6 @@
 # Date
 
-The library provides the notion of a calendar date.
+The library provides a notion of the calendar date.
 
 ## Contributing
 
