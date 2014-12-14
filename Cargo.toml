@@ -8,4 +8,4 @@ homepage = "https://github.com/stainless-steel/date"
 description = "The library provides a notion of the calendar date."
 
 [dependencies]
-time = "0.1.1"
+time = "0.1.2"
