@@ -5,7 +5,7 @@
 extern crate time;
 
 /// A representation of a day in the Gregorian calendar.
-#[deriving(Default, PartialEq, Eq, Ord, Show)]
+#[deriving(Copy, Default, PartialEq, Eq, Ord, Show)]
 pub struct Date {
     /// The year.
     pub year: u32,
