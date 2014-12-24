@@ -20,18 +20,18 @@ impl PartialOrd for Date {
         macro_rules! cmp(
             ($one:expr, $two:expr) => (
                 if $one > $two {
-                    return Some(std::cmp::Greater);
+                    return Some(std::cmp::Ordering::Greater);
                 } else if $one < $two {
-                    return Some(std::cmp::Less);
+                    return Some(std::cmp::Ordering::Less);
                 }
             );
-        )
+        );
 
         cmp!(self.year, other.year);
         cmp!(self.month, other.month);
         cmp!(self.day, other.day);
 
-        Some(std::cmp::Equal)
+        Some(std::cmp::Ordering::Equal)
     }
 }
 
@@ -59,7 +59,7 @@ impl Date {
 mod test {
     macro_rules! date(
         ($year:expr, $month:expr, $day:expr) => (::Date::new($year, $month, $day));
-    )
+    );
 
     #[test]
     fn eq() {
@@ -78,7 +78,9 @@ mod test {
 
     #[test]
     fn at_utc_1904() {
-        macro_rules! at(($seconds:expr) => (::Date::at_utc_1904($seconds));)
+        macro_rules! at(
+            ($seconds:expr) => (::Date::at_utc_1904($seconds));
+        );
 
         assert_eq!(at!(0), date!(1904, 1, 1));
         assert_eq!(at!(2678399), date!(1904, 1, 31));

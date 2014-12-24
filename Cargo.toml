@@ -1,6 +1,6 @@
 [package]
 name = "date"
-version = "0.0.4"
+version = "0.0.5"
 authors = ["Ivan Ukhov <ivan.ukhov@gmail.com>"]
 license = "MIT"
 repository = "https://github.com/stainless-steel/date"
@@ -8,4 +8,4 @@ homepage = "https://github.com/stainless-steel/date"
 description = "The library provides a notion of the calendar date."
 
 [dependencies]
-time = "0.1.2"
+time = "0.1.4"
