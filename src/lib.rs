@@ -1,11 +1,11 @@
 //! A notion of the calendar date.
 
-#![feature(macro_rules)]
-
 extern crate time;
 
+use std::cmp::Ordering;
+
 /// A representation of a day in the Gregorian calendar.
-#[deriving(Copy, Default, PartialEq, Eq, Ord, Show)]
+#[derive(Copy, Default, PartialEq, Eq, Ord, Show)]
 pub struct Date {
     /// The year.
     pub year: u32,
@@ -20,9 +20,9 @@ impl PartialOrd for Date {
         macro_rules! cmp(
             ($one:expr, $two:expr) => (
                 if $one > $two {
-                    return Some(std::cmp::Ordering::Greater);
+                    return Some(Ordering::Greater);
                 } else if $one < $two {
-                    return Some(std::cmp::Ordering::Less);
+                    return Some(Ordering::Less);
                 }
             );
         );
@@ -31,7 +31,7 @@ impl PartialOrd for Date {
         cmp!(self.month, other.month);
         cmp!(self.day, other.day);
 
-        Some(std::cmp::Ordering::Equal)
+        Some(Ordering::Equal)
     }
 }
 
