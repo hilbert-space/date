@@ -1,5 +1,7 @@
 //! A notion of the calendar date.
 
+#![allow(unstable)]
+
 extern crate time;
 
 use std::cmp::Ordering;
