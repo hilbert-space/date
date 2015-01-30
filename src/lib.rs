@@ -1,13 +1,14 @@
 //! A notion of the calendar date.
 
-#![allow(unstable)]
+#![feature(core)]
 
 extern crate time;
 
+use std::fmt;
 use std::cmp::Ordering;
 
 /// A representation of a day in the Gregorian calendar.
-#[derive(Copy, Default, PartialEq, Eq, Ord, Show)]
+#[derive(Copy, Default, PartialEq, Eq, Ord, Debug)]
 pub struct Date {
     /// The year.
     pub year: u32,
@@ -15,6 +16,12 @@ pub struct Date {
     pub month: u8,
     /// The day.
     pub day: u8,
+}
+
+impl fmt::Display for Date {
+    fn fmt(&self, formatter: &mut fmt::Formatter) -> fmt::Result {
+        fmt::Debug::fmt(self, formatter)
+    }
 }
 
 impl PartialOrd for Date {
