@@ -1,7 +1,5 @@
 //! A notion of the calendar date.
 
-#![feature(core)]
-
 extern crate time;
 
 use std::fmt;
