@@ -6,7 +6,7 @@ use std::fmt;
 use std::cmp::Ordering;
 
 /// A representation of a day in the Gregorian calendar.
-#[derive(Copy, Default, PartialEq, Eq, Ord, Debug)]
+#[derive(Clone, Copy, Default, PartialEq, Eq, Ord, Debug)]
 pub struct Date {
     /// The year.
     pub year: u32,
